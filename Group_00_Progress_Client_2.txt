@@ -1,0 +1,51 @@
+11:55:05 - Connecting to OPC UA server "opc.tcp://localhost:7001"
+11:55:07 - Loading operation list
+There are 4 Requests in the Operation List
+-----------------------------------------------------------------
+Starting Operation C
+11:55:10 - Transferring a New Workpiece with ID: WID_MSR134
+11:55:15 - Connecting to KUKA robot
+11:55:15 - Starting Kuka Robot Operation ---> Measurement Started
+-----------------------------------------------------------------
+Starting Operation C
+11:55:15 - Transferring a New Workpiece with ID: WID_MSR183
+11:55:15 - Connecting to KUKA robot
+11:55:15 - Starting Kuka Robot Operation ---> Measurement Started
+11:55:21 - KUKA Operation Measurement Completed
+11:55:21 - KUKA Operation Measurement Completed
+11:55:22 - Operation C Completed
+-----------------------------------------------------------------
+Starting Operation C
+-----------------------------------------------------------------
+Starting Operation C
+11:55:27 - Transferring a New Workpiece with ID: WID_MSR129
+11:55:27 - Transferring a New Workpiece with ID: WID_MSR494
+11:55:33 - Connecting to KUKA robot
+11:55:33 - Connecting to KUKA robot
+11:55:33 - Starting Kuka Robot Operation ---> Measurement Started
+11:55:33 - Starting Kuka Robot Operation ---> Measurement Started
+11:55:39 - KUKA Operation Measurement Completed
+11:55:39 - KUKA Operation Measurement Completed
+11:55:39 - Operation C Completed
+11:55:39 - Operation C Completed
+-----------------------------------------------------------------
+Starting Operation C
+11:55:45 - Transferring a New Workpiece with ID: WID_MSR701
+11:55:50 - Connecting to KUKA robot
+11:55:50 - Starting Kuka Robot Operation ---> Measurement Started
+11:55:51 - KUKA Operation Measurement Completed
+11:55:52 - Operation C Completed
+-----------------------------------------------------------------
+Starting Operation C
+11:56:03 - Transferring a New Workpiece with ID: WID_MSR372
+-----------------------------------------------------------------
+Starting Operation C
+11:56:08 - Connecting to KUKA robot
+11:56:08 - Starting Kuka Robot Operation ---> Measurement Started
+11:56:08 - Transferring a New Workpiece with ID: WID_MSR25
+11:56:10 - KUKA Operation Measurement Completed
+11:56:10 - Operation C Completed
+11:56:13 - Connecting to KUKA robot
+11:56:13 - Starting Kuka Robot Operation ---> Measurement Started
+11:56:20 - KUKA Operation Measurement Completed
+11:56:20 - Operation C Completed

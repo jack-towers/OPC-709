@@ -85,9 +85,9 @@ print("lathe?: %s" % kuka)
 print()
 
 
-Equipment_ID1 = client.get_node("i=2533") # Example      ##THIS IS CONVEYOR
-Equipment_ID2 = client.get_node("ns=2;i=1")       # TODO: Get a reference to the 'Equipment_ID2' node  KUKA
-Equipment_ID3 = client.get_node("ns=1;s=1001")          # TODO: Get a reference to the 'Equipment_ID3' node LATHE
+Equipment_ID1 = client.get_node("ns=2;i=2") # Example      ##THIS IS CONVEYOR
+Equipment_ID2 = client.get_node("ns=2;i=3")       # TODO: Get a reference to the 'Equipment_ID2' node  KUKA
+Equipment_ID3 = client.get_node("ns=2;i=4")          # TODO: Get a reference to the 'Equipment_ID3' node LATHE
 
 
 time_left_conveyor = client.get_node("ns=2;i=5")     # TODO: Get a reference to the 'time_left_conveyor' node
@@ -156,11 +156,11 @@ def Record_machine_status():
 
 #############################################################################################
 # Assigning method node ID to the variable
-print("Methods: ", method)
-Start_Conveyor_prog = method[1]  # Example
-Start_Lathe_Prog1 =  method[2]           # TODO: Get a reference to the 'Start_Lathe_Prog1' method node
-Start_Lathe_Prog2 =  method[3]           # TODO: Get a reference to the 'Start_Lathe_Prog2' method node
-Start_Kuka_Prog1 =  method[0]     #TODO: Get a reference to the 'Start_Kuka_Prog1' method node
+##print("Methods: ", method)
+Start_Conveyor_prog = method[2]  # Example
+Start_Lathe_Prog1 =  method[3]           # TODO: Get a reference to the 'Start_Lathe_Prog1' method node
+Start_Lathe_Prog2 =  method[4]           # TODO: Get a reference to the 'Start_Lathe_Prog2' method node
+Start_Kuka_Prog1 =  method[5]     #TODO: Get a reference to the 'Start_Kuka_Prog1' method node
 #############################################################################################
 
 # Adding and starting a new thread
@@ -198,7 +198,7 @@ for Current_operation in Company_1_operation_list:
     #############################################################################################
     # TODO: add code to link conveyor program  start method and pass the current operation detail
     ##print("Methods: ",objects_node.get_methods())
-    Workpiece = objects_node.call_method(objects_node.get_methods()[0], Current_operation)
+    Workpiece = objects_node.call_method(Start_Conveyor_prog, Current_operation)
     #############################################################################################
 
     print("{} - Initialising Conveyor Belt".format(current_time.get_value()))
@@ -228,8 +228,8 @@ for Current_operation in Company_1_operation_list:
         #############################################################################################
         # starting Start_Kuka_Prog1 program on kuka
         # TODO: add code to link Start_Kuka_Prog1 program  start method
-        print("Methods: ",objects_node.get_methods()[1])
-        return_value_kuka_prog1 = objects_node.call_method(objects_node.get_methods()[0], "Fuck")
+        ##print("Methods: ",objects_node.get_methods()[0])
+        return_value_kuka_prog1 = objects_node.call_method(Start_Kuka_Prog1)
         #############################################################################################
 
         sleep(1)
@@ -263,7 +263,7 @@ for Current_operation in Company_1_operation_list:
         # starting Start_lathe_Prog1 program on Lathe
         # Operation Turning & Drilling
         # TODO: add code to link Start_lathe_Prog1 program  start method
-        return_value_lathe_prog1 = objects_node.call_method(objects_node.get_methods()[0],"Lathe_Prog1")
+        return_value_lathe_prog1 = objects_node.call_method(Start_Lathe_Prog1)
         #############################################################################################
 
         sleep(0.1)
@@ -284,7 +284,7 @@ for Current_operation in Company_1_operation_list:
         #############################################################################################
         # starting Start_kuka_Prog1 program on kuka
         # TODO: add code to link Start_kuka_Prog1 program  start method
-        return_value_kuka_prog1 = objects_node.call_method(objects_node.get_methods()[0], "Kuka_Prog1")
+        return_value_kuka_prog1 = objects_node.call_method(Start_Kuka_Prog1)
         #############################################################################################
 
         sleep(1)
