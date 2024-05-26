@@ -66,23 +66,13 @@ method = objects_node.get_children()
 
 # Present the data structure of the OPC UA server
 root = client.get_objects_node()
-print("Root Node Id: %s" % root)
-print("Children of root are: %s" % root.get_children())
-print()
 
-print("Children of the objects node are: %s" % objects_node.get_children())
-print()
 sensor_name_node = root.get_children()[0].get_children()
-print("Conveyor?: %s" % sensor_name_node)
-print()
 
 kuka = root.get_children()[1].get_children()
-print("Conveyor?: %s" % kuka)
-print()
 
 kuka = root.get_children()[2].get_children()
-print("lathe?: %s" % kuka)
-print()
+
 
 
 Equipment_ID1 = client.get_node("ns=2;i=2") # Example      ##THIS IS CONVEYOR
@@ -228,7 +218,6 @@ for Current_operation in Company_1_operation_list:
         #############################################################################################
         # starting Start_Kuka_Prog1 program on kuka
         # TODO: add code to link Start_Kuka_Prog1 program  start method
-        ##print("Methods: ",objects_node.get_methods()[0])
         return_value_kuka_prog1 = objects_node.call_method(Start_Kuka_Prog1)
         #############################################################################################
 
