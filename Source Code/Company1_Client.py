@@ -282,7 +282,7 @@ for Current_operation in Company_1_operation_list:
             f.write("{} - Starting Kuka Robot Operation ---> Pick & Place Started\n".format(current_time.get_value()))
 
         #############################################################################################
-        # starting Start_kuka_Prog1 program on kuka
+        # xing Start_kuka_Prog1 program on kuka
         # TODO: add code to link Start_kuka_Prog1 program  start method
         return_value_kuka_prog1 = objects_node.call_method(Start_Kuka_Prog1)
         #############################################################################################
